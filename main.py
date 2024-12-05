@@ -47,3 +47,16 @@ def delete_patient(patient_id):
         writer.writerows(rows)
     print("Patient record deleted successfully.")
 # Main program loop
+
+# Add a new patient
+create_patient(["51", "Jane Doe", "30", "F", "Flu", "2024-12-04", "Rest and hydration"])
+
+# Read all patients
+read_patients()
+
+# Update a patient's record
+update_patient("51", ["51", "Jane Smith", "31", "F", "Hypertension", "2024-12-04", "Medication and lifestyle changes"])
+
+# Delete a patient's record
+delete_patient("51")
+# Read all patients after deletion
