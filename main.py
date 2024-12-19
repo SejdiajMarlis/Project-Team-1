@@ -81,3 +81,15 @@ def search_patient(column_index, search_value):
 # Assuming columns: [PatientID, Name, Age, Gender, Diagnosis, Admission Date, Treatment]
 # Search for patients with a specific diagnosis (e.g., "Pneumonia")
 search_patient(4, "Pneumonia")
+# Search for patients by age
+def search_by_age(age):
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        found = False
+        print(f"Search Results for Age {age}:")
+        for row in reader:
+            if row[2] == age:  # Assuming Age is the 3rd column
+                print(row)
+                found = True
+        if not found:
+            print("No matching records found.")
