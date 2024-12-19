@@ -93,3 +93,13 @@ def search_by_age(age):
                 found = True
         if not found:
             print("No matching records found.")
+# Display all unique diagnoses
+def unique_diagnoses():
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        diagnoses = set()
+        for row in reader:
+            diagnoses.add(row[4])  # Assuming Diagnosis is the 5th column
+    print("Unique Diagnoses:")
+    for diagnosis in diagnoses:
+        print(diagnosis)
