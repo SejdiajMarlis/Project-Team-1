@@ -63,7 +63,7 @@ delete_patient("51")
 read_patients()
 
 create_patient(["52", "John Doe", "40", "M", "Pneumonia", "2024-12-05", "Antibiotics and rest"])
-search_patient(4, "Pneumonia")  # Search by Diagnosis
+
 # Search for patients based on a specific column and value
 def search_patient(column_index, search_value):
     with open(file_name, mode='r') as file:

@@ -49,3 +49,5 @@ PatientID,Name,Age,Gender,Diagnosis,AdmissionDate,Treatment
 48,Lisa Weber,4,F,Asthma,2024-04-23,Isolation and antivirals
 49,Jacob Palmer,27,F,Fracture,2024-05-30,Isolation and antivirals
 50,Denise Young,74,M,Flu,2024-11-15,Medication and lifestyle changes
+52,John Doe,40,M,Pneumonia,2024-12-05,Antibiotics and rest
+52,John Doe,40,M,Pneumonia,2024-12-05,Antibiotics and rest
