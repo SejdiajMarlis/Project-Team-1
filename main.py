@@ -103,3 +103,15 @@ def unique_diagnoses():
     print("Unique Diagnoses:")
     for diagnosis in diagnoses:
         print(diagnosis)
+# Get the oldest and youngest patient
+def oldest_and_youngest_patient():
+    with open(file_name, mode='r') as file:
+        reader = csv.reader(file)
+        patients = list(reader)
+        if patients:
+            oldest = max(patients, key=lambda row: int(row[2]))  # Assuming Age is the 3rd column
+            youngest = min(patients, key=lambda row: int(row[2]))
+            print(f"Oldest patient: {oldest}")
+            print(f"Youngest patient: {youngest}")
+        else:
+            print("No patient records available.")
