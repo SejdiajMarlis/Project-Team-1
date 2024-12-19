@@ -60,3 +60,6 @@ update_patient("51", ["51", "Jane Smith", "31", "F", "Hypertension", "2024-12-04
 # Delete a patient's record
 delete_patient("51")
 # Read all patients after deletion
+read_patients()
+
+create_patient(["52", "John Doe", "40", "M", "Pneumonia", "2024-12-05", "Antibiotics and rest"])
