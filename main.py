@@ -63,3 +63,4 @@ delete_patient("51")
 read_patients()
 
 create_patient(["52", "John Doe", "40", "M", "Pneumonia", "2024-12-05", "Antibiotics and rest"])
+search_patient(4, "Pneumonia")  # Search by Diagnosis
