@@ -31,4 +31,10 @@ class BubbleSort(SortingAlgorithm):
                 if patients[j].severity_level < patients[j+1].severity_level:
                     patients[j], patients[j+1] = patients[j+1], patients[j]
         return patients
-        
+
+class MergeSort(SortingAlgorithm):
+    def sort(self, patients):
+        if len(patients) > 1:
+            mid = len(patients) // 2
+            left_half = patients[:mid]
+            right_half = patients[mid:]
