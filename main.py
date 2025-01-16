@@ -149,3 +149,14 @@ def evaluate_logical_expr(self, expr):
     except Exception as e:
         print(f"Error in logical expression '{expr}': {e}")
         return False
+        def sort_patients(self, algorithm):
+            patients_list = list(self.patients.values())
+
+            start_time = time.time()
+            sorted_patients = algorithm.sort(patients_list.copy())  # Create a copy for sorting
+            end_time = time.time()
+
+            print(f"Sorting completed in {end_time - start_time:.6f} seconds.")
+            print("\nSorted Patients:")
+            for patient in sorted_patients:
+                print(f"ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
