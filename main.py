@@ -103,3 +103,11 @@ def add_patient(self):
 
     self.patients[patient_id] = Patient(patient_id, name, age, condition, severity_level, logical_expr)
     print(f"\nPatient added with {condition} severity classification")
+
+def edit_patient(self):
+    patient_id = input("Enter Patient ID to edit: ").strip().lower()
+    if patient_id not in self.patients:
+        print("Patient ID not found.")
+        return
+    patient = self.patients[patient_id]
+    print(f"Editing details for Patient ID: {patient_id}, Current details: Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
