@@ -80,4 +80,9 @@ def add_patient(self):
     if patient_id in self.patients:
         print("Patient ID already exists. Use the edit option to modify patient details.")
         return
+    name = input("Enter Patient Name: ").strip()
+    age = int(input("Enter Patient Age: ").strip())
+    condition = input("Enter Medical Condition/Disease (e.g., flu, broken arm, pneumonia): ").strip()
+
+    
         
