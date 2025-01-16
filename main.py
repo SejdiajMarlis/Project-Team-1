@@ -197,3 +197,6 @@ def evaluate_logical_expr(self, expr):
                                         with open(file_name, mode='w', newline='') as file:
                                             writer = csv.writer(file)
                                             writer.writerow(['PatientID', 'Name', 'Age', 'Condition', 'SeverityLevel', 'LogicalExpression'])
+                                            for patient in self.patients.values():
+                                                    writer.writerow([patient.patient_id, patient.name, patient.age, patient.condition, patient.severity_level, patient.logical_expr])
+                                            print(f"Patients saved successfully to {file_name}")
