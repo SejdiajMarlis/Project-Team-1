@@ -160,3 +160,10 @@ def evaluate_logical_expr(self, expr):
             print("\nSorted Patients:")
             for patient in sorted_patients:
                 print(f"ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
+                def search_patient(self, patient_id):
+                    patient_id = patient_id.strip().lower()
+                    if patient_id in self.patients:
+                        patient = self.patients[patient_id]
+                        print(f"Found Patient - ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
+                    else:
+                        print("Patient not found.")
