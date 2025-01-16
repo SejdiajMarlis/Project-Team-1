@@ -200,3 +200,5 @@ def evaluate_logical_expr(self, expr):
                                             for patient in self.patients.values():
                                                     writer.writerow([patient.patient_id, patient.name, patient.age, patient.condition, patient.severity_level, patient.logical_expr])
                                             print(f"Patients saved successfully to {file_name}")
+                                            except Exception as e:
+                                            print(f"Error saving to CSV: {e}")
