@@ -17,3 +17,8 @@ class Patient(Person):
         self.condition = condition
         self.severity_level = severity_level  # Numeric field for primary sorting
         self.logical_expr = logical_expr     # Logical field for secondary sorting
+        
+class SortingAlgorithm(ABC):
+    @abstractmethod
+    def sort(self, patients):
+        pass
