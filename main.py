@@ -86,16 +86,16 @@ def add_patient(self):
 
         # Get severity level from 1-10
         while True:
-        try:
-            severity_level = float(input("Enter Severity Level (1-10, where 1 is least severe and 10 is most severe): ").strip())
-            if 1 <= severity_level <= 10:
-                break
-            print("Please enter a number between 1 and 10")
-        except ValueError:
-            print("Please enter a valid number")
+            try:
+                severity_level = float(input("Enter Severity Level (1-10, where 1 is least severe and 10 is most severe): ").strip())
+                if 1 <= severity_level <= 10:
+                    break
+                print("Please enter a number between 1 and 10")
+            except ValueError:
+                print("Please enter a valid number")
             
-    # Determine logical expression based on severity level
-    logical_expr = "p"  # default
+        # Determine logical expression based on severity level
+        logical_expr = "p"  # default
     for severity_range, expr in self.severity_to_logic.items():
         if int(severity_level) in severity_range:
             logical_expr = expr
@@ -116,7 +116,7 @@ def edit_patient(self):
         age = input("Enter new Patient Age (leave blank to keep current): ").strip()
         age = int(age) if age else patient.age
         condition = input("Enter new Medical Condition/Disease (e.g., flu, covid, pneumonia, leave blank to keep current): ").strip() or patient.condition
-    while True:
+        while True:
         severity_input = input("Enter new Severity Level (1-10, where 1 is least severe and 10 is most severe, leave blank to keep current): ").strip()
         if not severity_input:
             severity_level = patient.severity_level
