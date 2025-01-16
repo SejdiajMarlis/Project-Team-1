@@ -135,3 +135,10 @@ for severity_range, expr in self.severity_to_logic.items():
     if int(severity_level) in severity_range:
         logical_expr = expr
         break
+self.patients[patient_id] = Patient(patient_id, name, age, condition, severity_level, logical_expr)
+    print("Patient details updated successfully.")
+
+def display_patients(self):
+    print("\nCurrent Patients in the System:")
+    for patient in self.patients.values():
+        print(f"ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
