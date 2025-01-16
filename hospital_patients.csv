@@ -1,0 +1,5 @@
+PatientID,Name,Age,Condition,SeverityLevel,LogicalExpression
+P001,Alice,34,Flu,5.2,p and q
+P002,Bob,45,Fracture,8.4,p or q
+P003,Charlie,29,Diabetes,7.0,not p
+P004,Diana,40,Hypertension,9.1,p and not q
