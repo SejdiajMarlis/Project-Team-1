@@ -219,3 +219,5 @@ def evaluate_logical_expr(self, expr):
                                         print("8. Save Patients to CSV")
                                         print("9. Exit")
                                          choice = input("Enter your choice: ").strip().lower()
+                                        if choice == '1':
+                                            system.add_patient()
