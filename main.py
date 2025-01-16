@@ -63,3 +63,15 @@ class MergeSort(SortingAlgorithm):
                 j += 1
                 k += 1
         return patients
+
+class HospitalManagementSystem:
+    def __init__(self):
+        self.patients = {}
+        # Map severity levels to logical expressions
+        self.severity_to_logic = {
+            range(1, 4): "p and not q",     # Low severity (1-3)
+            range(4, 7): "not p or q",      # Medium severity (4-6)
+            range(7, 9): "p and (q or r)",  # High severity (7-8)
+            range(9, 11): "p and r"         # Critical severity (9-10)
+        }
+        
