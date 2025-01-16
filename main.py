@@ -191,3 +191,9 @@ def evaluate_logical_expr(self, expr):
                                             print("Patients loaded successfully from CSV.")
                                             except Exception as e:
                                                 print(f"Error reading CSV: {e}")
+                                def save_to_csv(self, file_name):
+                                    try:
+                                        file_name = file_name or "hospital_patients.csv"  # Use default if empty
+                                        with open(file_name, mode='w', newline='') as file:
+                                            writer = csv.writer(file)
+                                            writer.writerow(['PatientID', 'Name', 'Age', 'Condition', 'SeverityLevel', 'LogicalExpression'])
