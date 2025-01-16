@@ -221,3 +221,25 @@ def evaluate_logical_expr(self, expr):
                                          choice = input("Enter your choice: ").strip().lower()
                                         if choice == '1':
                                             system.add_patient()
+                                            elif choice == '2':
+                                                system.edit_patient()
+                                            elif choice == '3':
+                                                system.display_patients()
+                                            elif choice == '4':
+                                                system.sort_patients(bubble_sort)
+                                            elif choice == '5':
+                                                system.sort_patients(merge_sort)
+                                            elif choice == '6':
+                                                patient_id = input("Enter Patient ID to search: ")
+                                                system.search_patient(patient_id)
+                                            elif choice == '7':
+                                                file_name = input("Enter CSV file name to load: (Press Enter to use the default file): ").strip() or "hospital_patients.csv"
+                                                system.load_from_csv(file_name)
+                                            elif choice == '8':
+                                                file_name = input("Press Enter to save to hospital_patients.csv or enter a different filename: ").strip()
+                                                system.save_to_csv(file_name)
+                                            elif choice == '9':
+                                                print("Exiting the system. Goodbye!")
+                                                break
+                                            else:
+                                                print("Invalid choice. Please try again.")
