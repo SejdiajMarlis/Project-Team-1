@@ -22,3 +22,13 @@ class SortingAlgorithm(ABC):
     @abstractmethod
     def sort(self, patients):
         pass
+        
+class BubbleSort(SortingAlgorithm):
+    def sort(self, patients):
+        n = len(patients)
+        for i in range(n):
+            for j in range(0, n-i-1):
+                if patients[j].severity_level < patients[j+1].severity_level:
+                    patients[j], patients[j+1] = patients[j+1], patients[j]
+        return patients
+        
