@@ -84,5 +84,13 @@ def add_patient(self):
     age = int(input("Enter Patient Age: ").strip())
     condition = input("Enter Medical Condition/Disease (e.g., flu, broken arm, pneumonia): ").strip()
 
-    
+    # Get severity level from 1-10
+    while True:
+        try:
+            severity_level = float(input("Enter Severity Level (1-10, where 1 is least severe and 10 is most severe): ").strip())
+            if 1 <= severity_level <= 10:
+                break
+            print("Please enter a number between 1 and 10")
+        except ValueError:
+            print("Please enter a valid number")
         
