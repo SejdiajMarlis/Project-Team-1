@@ -142,3 +142,10 @@ def display_patients(self):
     print("\nCurrent Patients in the System:")
     for patient in self.patients.values():
         print(f"ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
+def evaluate_logical_expr(self, expr):
+    variables = {"p": True, "q": False, "r": True, "s": False}  # Example truth values
+    try:
+        return eval(expr, {}, variables)
+    except Exception as e:
+        print(f"Error in logical expression '{expr}': {e}")
+        return False
