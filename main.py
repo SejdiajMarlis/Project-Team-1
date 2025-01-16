@@ -77,12 +77,12 @@ class HospitalManagementSystem:
 
 def add_patient(self):
         patient_id = input("Enter Patient ID: ").strip().lower()
-    if patient_id in self.patients:
-        print("Patient ID already exists. Use the edit option to modify patient details.")
-        return
-    name = input("Enter Patient Name: ").strip()
-    age = int(input("Enter Patient Age: ").strip())
-    condition = input("Enter Medical Condition/Disease (e.g., flu, broken arm, pneumonia): ").strip()
+        if patient_id in self.patients:
+            print("Patient ID already exists. Use the edit option to modify patient details.")
+            return
+        name = input("Enter Patient Name: ").strip()
+        age = int(input("Enter Patient Age: ").strip())
+        condition = input("Enter Medical Condition/Disease (e.g., flu, broken arm, pneumonia): ").strip()
 
     # Get severity level from 1-10
     while True:
@@ -106,10 +106,10 @@ def add_patient(self):
 
 def edit_patient(self):
         patient_id = input("Enter Patient ID to edit: ").strip().lower()
-    if patient_id not in self.patients:
-        print("Patient ID not found.")
-        return
-    patient = self.patients[patient_id]
+        if patient_id not in self.patients:
+            print("Patient ID not found.")
+            return
+        patient = self.patients[patient_id]
     print(f"Editing details for Patient ID: {patient_id}, Current details: Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
 
     name = input("Enter new Patient Name (leave blank to keep current): ").strip() or patient.name
