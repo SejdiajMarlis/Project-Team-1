@@ -76,7 +76,7 @@ class HospitalManagementSystem:
         }
 
 def add_patient(self):
-    patient_id = input("Enter Patient ID: ").strip().lower()
+        patient_id = input("Enter Patient ID: ").strip().lower()
     if patient_id in self.patients:
         print("Patient ID already exists. Use the edit option to modify patient details.")
         return
@@ -105,7 +105,7 @@ def add_patient(self):
     print(f"\nPatient added with {condition} severity classification")
 
 def edit_patient(self):
-    patient_id = input("Enter Patient ID to edit: ").strip().lower()
+        patient_id = input("Enter Patient ID to edit: ").strip().lower()
     if patient_id not in self.patients:
         print("Patient ID not found.")
         return
