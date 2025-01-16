@@ -74,4 +74,10 @@ class HospitalManagementSystem:
             range(7, 9): "p and (q or r)",  # High severity (7-8)
             range(9, 11): "p and r"         # Critical severity (9-10)
         }
+
+def add_patient(self):
+    patient_id = input("Enter Patient ID: ").strip().lower()
+    if patient_id in self.patients:
+        print("Patient ID already exists. Use the edit option to modify patient details.")
+        return
         
