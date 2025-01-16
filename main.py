@@ -116,3 +116,16 @@ def edit_patient(self):
     age = input("Enter new Patient Age (leave blank to keep current): ").strip()
     age = int(age) if age else patient.age
 condition = input("Enter new Medical Condition/Disease (e.g., flu, covid, pneumonia, leave blank to keep current): ").strip() or patient.condition
+
+    while True:
+        severity_input = input("Enter new Severity Level (1-10, where 1 is least severe and 10 is most severe, leave blank to keep current): ").strip()
+        if not severity_input:
+            severity_level = patient.severity_level
+            break
+        try:
+            severity_level = float(severity_input)
+            if 1 <= severity_level <= 10:
+                break
+            print("Please enter a number between 1 and 10")
+        except ValueError:
+            print("Please enter a valid number")
