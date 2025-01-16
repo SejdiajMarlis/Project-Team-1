@@ -129,3 +129,9 @@ def edit_patient(self):
             print("Please enter a number between 1 and 10")
         except ValueError:
             print("Please enter a valid number")
+# Determine logical expression based on severity level
+logical_expr = "p"  # default
+for severity_range, expr in self.severity_to_logic.items():
+    if int(severity_level) in severity_range:
+        logical_expr = expr
+        break
