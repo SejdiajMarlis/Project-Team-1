@@ -38,3 +38,28 @@ class MergeSort(SortingAlgorithm):
             mid = len(patients) // 2
             left_half = patients[:mid]
             right_half = patients[mid:]
+
+            self.sort(left_half)
+            self.sort(right_half)
+
+            i = j = k = 0
+
+            while i < len(left_half) and j < len(right_half):
+                if left_half[i].severity_level >= right_half[j].severity_level:
+                   patients[k] = left_half[i]
+            i += 1
+        else:
+            patients[k] = right_half[j]
+            j += 1
+        k += 1
+
+    while i < len(left_half):
+        patients[k] = left_half[i]
+        i += 1
+        k += 1
+
+    while j < len(right_half):
+        patients[k] = right_half[j]
+        j += 1
+        k += 1
+return patients
