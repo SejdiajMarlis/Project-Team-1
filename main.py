@@ -180,3 +180,14 @@ def evaluate_logical_expr(self, expr):
                                         if int(severity_level) in severity_range:
                                             logical_expr = expr
                                             break
+                                            self.patients[patient_id] = Patient(
+                                                patient_id,
+                                                row['Name'].strip(),
+                                                int(row['Age']),
+                                                row['Condition'].strip(),
+                                                severity_level,
+                                                logical_expr
+                                            )
+                                            print("Patients loaded successfully from CSV.")
+                                            except Exception as e:
+                                                print(f"Error reading CSV: {e}")
