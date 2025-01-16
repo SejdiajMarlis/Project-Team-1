@@ -167,3 +167,16 @@ def evaluate_logical_expr(self, expr):
                         print(f"Found Patient - ID: {patient.patient_id}, Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
                     else:
                         print("Patient not found.")
+                        def load_from_csv(self, file_name):
+                            try:
+                                df = pd.read_csv(file_name)
+                                for _, row in df.iterrows():
+                                    patient_id = row['PatientID'].strip().lower()
+                                    severity_level = float(row['SeverityLevel'])
+
+                                    # Determine logical expression based on severity level
+                                    logical_expr = "p"  # default
+                                    for severity_range, expr in self.severity_to_logic.items():
+                                        if int(severity_level) in severity_range:
+                                            logical_expr = expr
+                                            break
