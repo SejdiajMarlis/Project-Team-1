@@ -111,3 +111,8 @@ def edit_patient(self):
         return
     patient = self.patients[patient_id]
     print(f"Editing details for Patient ID: {patient_id}, Current details: Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
+    
+    name = input("Enter new Patient Name (leave blank to keep current): ").strip() or patient.name
+    age = input("Enter new Patient Age (leave blank to keep current): ").strip()
+    age = int(age) if age else patient.age
+condition = input("Enter new Medical Condition/Disease (e.g., flu, covid, pneumonia, leave blank to keep current): ").strip() or patient.condition
