@@ -218,3 +218,4 @@ def evaluate_logical_expr(self, expr):
                                         print("7. Load Patients from CSV")
                                         print("8. Save Patients to CSV")
                                         print("9. Exit")
+                                         choice = input("Enter your choice: ").strip().lower()
