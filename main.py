@@ -84,8 +84,8 @@ def add_patient(self):
         age = int(input("Enter Patient Age: ").strip())
         condition = input("Enter Medical Condition/Disease (e.g., flu, broken arm, pneumonia): ").strip()
 
-    # Get severity level from 1-10
-    while True:
+        # Get severity level from 1-10
+        while True:
         try:
             severity_level = float(input("Enter Severity Level (1-10, where 1 is least severe and 10 is most severe): ").strip())
             if 1 <= severity_level <= 10:
@@ -110,12 +110,12 @@ def edit_patient(self):
             print("Patient ID not found.")
             return
         patient = self.patients[patient_id]
-    print(f"Editing details for Patient ID: {patient_id}, Current details: Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
+        print(f"Editing details for Patient ID: {patient_id}, Current details: Name: {patient.name}, Age: {patient.age}, Condition: {patient.condition}, Severity: {patient.severity_level}, Logical Expression: {patient.logical_expr}")
 
-    name = input("Enter new Patient Name (leave blank to keep current): ").strip() or patient.name
-    age = input("Enter new Patient Age (leave blank to keep current): ").strip()
-    age = int(age) if age else patient.age
-    condition = input("Enter new Medical Condition/Disease (e.g., flu, covid, pneumonia, leave blank to keep current): ").strip() or patient.condition
+        name = input("Enter new Patient Name (leave blank to keep current): ").strip() or patient.name
+        age = input("Enter new Patient Age (leave blank to keep current): ").strip()
+        age = int(age) if age else patient.age
+        condition = input("Enter new Medical Condition/Disease (e.g., flu, covid, pneumonia, leave blank to keep current): ").strip() or patient.condition
     while True:
         severity_input = input("Enter new Severity Level (1-10, where 1 is least severe and 10 is most severe, leave blank to keep current): ").strip()
         if not severity_input:
